@@ -128,20 +128,41 @@ document.getElementById("numberConversionOutput").innerHTML = conversionResults;
 
 // TODO:
 // 1. Create at least 2-3 numeric variables
-//
+var homeworkScore = 88;
+var quizScore = 92;
+var examScore = 81;
+
 // 2. Perform calculations:
 //    - at least one addition
 //    - at least one other operation (subtract, multiply, or divide)
-//
+var totalScore = homeworkScore + quizScore + examScore;
+var averageScore = totalScore / 3;
+
 // 3. Use at least ONE of the following:
 //    - toFixed()
 //    - toLocaleString()
 //    - Number.parseInt()
 //    - Number.parseFloat()
-//
+var averageScoreFormatted = averageScore.toFixed(2);
+
 // 4. Build a string showing your results
-//
+var gradeMessage = "";
+if (averageScore >= 70) {
+  gradeMessage = "Passing";
+} else {
+  gradeMessage = "Not passing";
+}
+
+var mathResults = "";
+mathResults += "<p>Homework score: " + homeworkScore + "</p>";
+mathResults += "<p>Quiz score: " + quizScore + "</p>";
+mathResults += "<p>Exam score: " + examScore + "</p>";
+mathResults += "<p>Total score: " + totalScore + "</p>";
+mathResults += "<p>Average score: " + averageScoreFormatted + "</p>";
+mathResults += "<p>Result: " + gradeMessage + "</p>";
+
 // 5. Display the results inside the element with id="mathOutput"
+document.getElementById("mathOutput").innerHTML = mathResults;
 
 // ==========================
 // Part 4: Conditionals
