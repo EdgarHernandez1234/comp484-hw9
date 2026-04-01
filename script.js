@@ -42,6 +42,10 @@ document.getElementById("dateOutput").textContent = formattedDate;
 //    - at least 2 numeric strings (example: "42")
 //    - at least 1 decimal string (example: "19.75")
 //    - at least 1 non-numeric string (example: "hello")
+var valueOne = "85";
+var valueTwo = "24.25";
+var valueThree = "world";
+var valueFour = "9000";
 
 // TODO:
 // 2. For EACH variable:
@@ -49,6 +53,20 @@ document.getElementById("dateOutput").textContent = formattedDate;
 //    a. Convert the value using Number()
 //    b. Check if it is NaN using Number.isNaN()
 //    c. Check if it is an integer using Number.isInteger()
+var convertedOne = Number(valueOne);
+var convertedTwo = Number(valueTwo);
+var convertedThree = Number(valueThree);
+var convertedFour = Number(valueFour);
+
+var valueOneIsNaN = Number.isNaN(convertedOne);
+var valueTwoIsNaN = Number.isNaN(convertedTwo);
+var valueThreeIsNaN = Number.isNaN(convertedThree);
+var valueFourIsNaN = Number.isNaN(convertedFour);
+
+var valueOneIsInteger = Number.isInteger(convertedOne);
+var valueTwoIsInteger = Number.isInteger(convertedTwo);
+var valueThreeIsInteger = Number.isInteger(convertedThree);
+var valueFourIsInteger = Number.isInteger(convertedFour);
 
 // TODO:
 // 3. For EACH value, create a sentence showing:
@@ -60,13 +78,49 @@ document.getElementById("dateOutput").textContent = formattedDate;
 // Example format (you must create your own variables):
 // "Original: '42' -> Converted: 42 -> isNaN: false -> isInteger: true"
 
+var valueOneMessage = "";
+if (valueOneIsNaN) {
+  valueOneMessage = "This value is not a valid number.";
+} else {
+  valueOneMessage = "This value is a valid number.";
+}
+
+var valueTwoMessage = "";
+if (valueTwoIsInteger) {
+  valueTwoMessage = "This value is an integer.";
+} else {
+  valueTwoMessage = "This value is not an integer.";
+}
+
+var valueThreeMessage = "";
+if (valueThreeIsNaN) {
+  valueThreeMessage = "This value is not a valid number.";
+} else {
+  valueThreeMessage = "This value is a valid number.";
+}
+
+var valueFourMessage = "";
+if (valueFourIsInteger) {
+  valueFourMessage = "This value is an integer.";
+} else {
+  valueFourMessage = "This value is not an integer.";
+}
+
 // TODO:
 // 4. Combine all your results into ONE string
 //    (you can use + to join multiple strings)
 
+var conversionResults = "";
+conversionResults += "<p>Original value: \"" + valueOne + "\" &rarr; Converted: " + convertedOne + " &rarr; isNaN: " + valueOneIsNaN + " &rarr; isInteger: " + valueOneIsInteger + "<br>" + valueOneMessage + "</p>";
+conversionResults += "<p>Original value: \"" + valueTwo + "\" &rarr; Converted: " + convertedTwo + " &rarr; isNaN: " + valueTwoIsNaN + " &rarr; isInteger: " + valueTwoIsInteger + "<br>" + valueTwoMessage + "</p>";
+conversionResults += "<p>Original value: \"" + valueThree + "\" &rarr; Converted: " + convertedThree + " &rarr; isNaN: " + valueThreeIsNaN + " &rarr; isInteger: " + valueThreeIsInteger + "<br>" + valueThreeMessage + "</p>";
+conversionResults += "<p>Original value: \"" + valueFour + "\" &rarr; Converted: " + convertedFour + " &rarr; isNaN: " + valueFourIsNaN + " &rarr; isInteger: " + valueFourIsInteger + "<br>" + valueFourMessage + "</p>";
+
 // TODO:
 // 5. Display the final result inside the element:
 //    id="numberConversionOutput"
+document.getElementById("numberConversionOutput").innerHTML = conversionResults;
+
 
 // ==========================
 // Part 3: Math & Formatting
