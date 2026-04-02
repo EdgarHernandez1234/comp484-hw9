@@ -6,10 +6,10 @@
 ## Github Pages Link
 https://edgarhernandez1234.github.io/comp484-hw9/
 
-1. Path to a screenshot file of the finished webpage
+3. Path to a screenshot file of the finished webpage
 https://github.com/EdgarHernandez1234/comp484-hw9/blob/main/Screenshot.png
 
-1. A short reflection of 4-5 sentences that answers:
+4. A short reflection of 4-5 sentences that answers:
 - What part was easiest?
 - What part was hardest?
 - What did you learn about the Date object?
