@@ -169,12 +169,12 @@ document.getElementById("mathOutput").innerHTML = mathResults;
 // ==========================
 
 // TODO:
-// 1. Write at least TWO if/else statements
+// 1. Write at least TWO if/else statements -> implemented in line 82-107
 //
 // Ideas:
 // - check if a value is NaN
 // - check if a number is an integer
 // - check if a result is greater than a certain value
 //
-// 2. Display a message on the page based on the condition
+// 2. Display a message on the page based on the condition -> line 150-154 implements this 
 //    (append it to an existing section or create a new message)
