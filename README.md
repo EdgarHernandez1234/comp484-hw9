@@ -22,11 +22,10 @@
 ### Part 4
 - Same as part 3
 
-1. Your GitHub Pages link
 ## Github Pages Link
 https://edgarhernandez1234.github.io/comp484-hw9/
 
-1. Path to a screenshot file of the finished webpage
+## Screenshot
 https://github.com/EdgarHernandez1234/comp484-hw9/blob/main/Screenshot.png
 
 ## Reflection
