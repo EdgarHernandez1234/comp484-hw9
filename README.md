@@ -9,16 +9,19 @@
 - getDate()
 - getFullYear()
 - getElementById()
+- getElementById().textContent
 
 ### Part 2
 - Number()
 - Number.isNaN()
 - Number.isInteger()
 - getElementById()
+- getElementById().innerHTML
 
 ### Part 3
 - toFixed(2)
 - getElementById()
+- getElementById().innerHTML
 ### Part 4
 - Same as part 3
 
