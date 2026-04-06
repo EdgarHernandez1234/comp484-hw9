@@ -15,13 +15,13 @@ var year = currentDate.getFullYear();
 // 3. Adjust month if needed (JavaScript months are 0-based)
 // 4. Add leading zeros to month/day if needed
 if (month < 10) {
-  month = "0" + month;
+  month = "0" + month; // adds leading zero since less than 10
 } else {
   month = String(month);
 }
 
 if (day < 10) {
-  day = "0" + day;
+  day = "0" + day; // adds leading zero since less than 10
 } else {
   day = String(day);
 }
@@ -30,7 +30,7 @@ if (day < 10) {
 var formattedDate = "Today is " + month + "/" + day + "/" + year;
 
 // 6. Display the result in the element with id="dateOutput"
-document.getElementById("dateOutput").textContent = formattedDate;
+document.getElementById("dateOutput").textContent = formattedDate; // outputs the formatted date to the HTML element with id="dateOutput"
 
 
 // ==========================
@@ -53,16 +53,20 @@ var valueFour = "9000";
 //    a. Convert the value using Number()
 //    b. Check if it is NaN using Number.isNaN()
 //    c. Check if it is an integer using Number.isInteger()
+
+// here the variables are converted to numbers using Number()
 var convertedOne = Number(valueOne);
 var convertedTwo = Number(valueTwo);
 var convertedThree = Number(valueThree);
 var convertedFour = Number(valueFour);
 
+// here the variables are checked if they are NaN using Number.isNaN()
 var valueOneIsNaN = Number.isNaN(convertedOne);
 var valueTwoIsNaN = Number.isNaN(convertedTwo);
 var valueThreeIsNaN = Number.isNaN(convertedThree);
 var valueFourIsNaN = Number.isNaN(convertedFour);
 
+// here the variables are checked if they are integers using Number.isInteger()
 var valueOneIsInteger = Number.isInteger(convertedOne);
 var valueTwoIsInteger = Number.isInteger(convertedTwo);
 var valueThreeIsInteger = Number.isInteger(convertedThree);
@@ -79,28 +83,28 @@ var valueFourIsInteger = Number.isInteger(convertedFour);
 // "Original: '42' -> Converted: 42 -> isNaN: false -> isInteger: true"
 
 var valueOneMessage = "";
-if (valueOneIsNaN) {
+if (valueOneIsNaN) { // if statement that executes depending if the converted value is NaN
   valueOneMessage = "This value is not a valid number.";
 } else {
   valueOneMessage = "This value is a valid number.";
 }
 
 var valueTwoMessage = "";
-if (valueTwoIsInteger) {
+if (valueTwoIsInteger) { // if statement that executes depending if the converted value is an integer
   valueTwoMessage = "This value is an integer.";
 } else {
   valueTwoMessage = "This value is not an integer.";
 }
 
 var valueThreeMessage = "";
-if (valueThreeIsNaN) {
+if (valueThreeIsNaN) { // if statement that executes depending if the converted value is NaN
   valueThreeMessage = "This value is not a valid number.";
 } else {
   valueThreeMessage = "This value is a valid number.";
 }
 
 var valueFourMessage = "";
-if (valueFourIsInteger) {
+if (valueFourIsInteger) { // if statement that executes depending if the converted valueis an integer
   valueFourMessage = "This value is an integer.";
 } else {
   valueFourMessage = "This value is not an integer.";
@@ -110,7 +114,7 @@ if (valueFourIsInteger) {
 // 4. Combine all your results into ONE string
 //    (you can use + to join multiple strings)
 
-var conversionResults = "";
+var conversionResults = ""; // here the results for each variable are combined into one string with the original value, converted value, and messages about whether it is NaN or an integer
 conversionResults += "<p>Original value: \"" + valueOne + "\" &rarr; Converted: " + convertedOne + " &rarr; isNaN: " + valueOneIsNaN + " &rarr; isInteger: " + valueOneIsInteger + "<br>" + valueOneMessage + "</p>";
 conversionResults += "<p>Original value: \"" + valueTwo + "\" &rarr; Converted: " + convertedTwo + " &rarr; isNaN: " + valueTwoIsNaN + " &rarr; isInteger: " + valueTwoIsInteger + "<br>" + valueTwoMessage + "</p>";
 conversionResults += "<p>Original value: \"" + valueThree + "\" &rarr; Converted: " + convertedThree + " &rarr; isNaN: " + valueThreeIsNaN + " &rarr; isInteger: " + valueThreeIsInteger + "<br>" + valueThreeMessage + "</p>";
@@ -143,18 +147,17 @@ var averageScore = totalScore / 3;
 //    - toLocaleString()
 //    - Number.parseInt()
 //    - Number.parseFloat()
-var averageScoreFormatted = averageScore.toFixed(2);
+var averageScoreFormatted = averageScore.toFixed(2); // formats the average score to 2 decimal places
 
 // 4. Build a string showing your results
 var gradeMessage = "";
-if (averageScore >= 70) {
+if (averageScore >= 70) { // addresses Part 4 with >= condition to determine if the average score is passing or not and outputs it depending on the result
   gradeMessage = "Passing";
 } else {
   gradeMessage = "Not passing";
 }
 
-var mathResults = "";
-mathResults += "<p>Homework score: " + homeworkScore + "</p>";
+var mathResults = ""; // same process as the output for Part 2 but now with the result and if passing or not
 mathResults += "<p>Quiz score: " + quizScore + "</p>";
 mathResults += "<p>Exam score: " + examScore + "</p>";
 mathResults += "<p>Total score: " + totalScore + "</p>";
@@ -169,12 +172,12 @@ document.getElementById("mathOutput").innerHTML = mathResults;
 // ==========================
 
 // TODO:
-// 1. Write at least TWO if/else statements -> implemented in line 82-107
+// 1. Write at least TWO if/else statements 
 //
 // Ideas:
 // - check if a value is NaN
 // - check if a number is an integer
 // - check if a result is greater than a certain value
 //
-// 2. Display a message on the page based on the condition -> line 150-154 implements this 
+// 2. Display a message on the page based on the condition
 //    (append it to an existing section or create a new message)
